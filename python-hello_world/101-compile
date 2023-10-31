@@ -2,7 +2,6 @@
 import py_compile
 import os
 import sys
-
 # Check if PYFILE environment variable is set
 if 'PYFILE' not in os.environ:
     sys.stderr.write("Error: The PYFILE environment variable is not set.\n")
