@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+import py_compile
+import os
+import sys
+
+# Check if PYFILE environment variable is set
+if 'PYFILE' not in os.environ:
+    sys.stderr.write("Error: The PYFILE environment variable is not set.\n")
+    sys.exit(1)
+
+# Get the Python file name from the environment variable
+py_file = os.environ['PYFILE']
+
+# Define the output file name with the ".pyc" extension
+pyc_file = f"{py_file}c"
+
+try:
+    # Compile the Python script
+    py_compile.compile(py_file, cfile=pyc_file)
+    print(f"Compiling {py_file} ...")
+except Exception as e:
+    sys.stderr.write(f"Error: {e}\n")
+    sys.exit(1)
