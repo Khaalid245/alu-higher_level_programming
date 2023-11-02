@@ -1,22 +1,17 @@
-#!/bin/bash
-import py_compile
-import os
-import sys
-# Check if PYFILE environment variable is set
-if 'PYFILE' not in os.environ:
-    sys.stderr.write("Error: The PYFILE environment variable is not set.\n")
-    sys.exit(1)
-
-# Get the Python file name from the environment variable
-py_file = os.environ['PYFILE']
-
-# Define the output file name with the ".pyc" extension
-pyc_file = f"{py_file}c"
-
-try:
-    # Compile the Python script
-    py_compile.compile(py_file, cfile=pyc_file)
-    print(f"Compiling {py_file} ...")
-except Exception as e:
-    sys.stderr.write(f"Error: {e}\n")
-    sys.exit(1)
+#!/bin/bash                                                                     
+# Compile the Python script and save it as $PYFILEc                             
+python3 -m compileall -b -x "__pycache__" "$PYFILE"                             
+                                                                                
+# Check if the compilation was successful                                       
+if [ $? -eq 0 ]; then                                                           
+    echo "Compilation successful."                                              
+    compiled_file="${PYFILE}c"                                                  
+    if [ -e "$compiled_file" ]; then                                            
+        mv "$PYFILE" "$compiled_file"                                           
+    else                                                                        
+        $PYFILE                                                                 
+    fi                                                                          
+else                                                                            
+    $PYFILE                                                                     
+fi                                                                              
+         
