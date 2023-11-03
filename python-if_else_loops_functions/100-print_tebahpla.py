@@ -5,4 +5,3 @@ for char in range(ord('z'), ord('Z') - 1, -1):
             print("{}".format(chr(char).upper()), end='')
         else:
             print("{}".format(chr(char).lower()), end='')
-
