@@ -5,4 +5,3 @@ def multiple_returns(sentence):
     else:
         sentence_length = 0
     return tuple((sentence_length, None if not sentence else sentence[:1]))
-
