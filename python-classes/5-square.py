@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Define a square"""
+"""
+ A class Square that defines a square by: (based on 4-square.py)
+"""
 
 
 class Square:
@@ -28,3 +30,13 @@ class Square:
     def area(self):
         """Returns square area."""
         return self.__size ** 2
+
+    def my_print(self):
+        """prints in stdout the square with the character #."""
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(0, self.__size):
+                for j in range(0, self.__size):
+                    print("#", end="")
+                print()
