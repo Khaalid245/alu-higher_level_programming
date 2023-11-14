@@ -1,2 +1,9 @@
+#!/usr/bin/python3
+"""Class Square that defines a square.
+    """
 
-idfhsoidvhsvoihsv
+
+class Square:
+    """Class Square that defines a square.
+    """
+    pass
