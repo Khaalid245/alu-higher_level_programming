@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for the Rectangle class"""
 
+
 class BaseGeometry:
     """A class representing base geometry"""
 
@@ -14,6 +15,7 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
 
 class Rectangle(BaseGeometry):
     """A class representing a rectangle"""
@@ -32,14 +34,14 @@ class Rectangle(BaseGeometry):
         """Return the rectangle representation"""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
-# For testing purposes
+
 if __name__ == "__main__":
     r = Rectangle(3, 5)
     print(r)
     print(dir(r))
 
     try:
-        print("Rectangle: {} - {}".format(r.__width, r.__height))
+        print("Rectangle: {} - {}".format(r._Rectangle__width, r._Rectangle__height))
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
 
