@@ -1,13 +1,18 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status."""
+"""Documented by Lsblack"""
 import urllib.request
 
+url = 'https://intranet.hbtn.io/status'
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    '\n    AppleWebKit/537.36 (KHTML, like Gecko)'
+    '\n    Chrome/99.0.4844.84 Safari/537.36',
+}
 
-if __name__ == "__main__":
-    request = urllib.request.Request("https://intranet.hbtn.io/status")
-    with urllib.request.urlopen(request) as response:
-        body = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body.decode("utf-8"))) 
+req = urllib.request.Request(url, headers=headers)
+with urllib.request.urlopen(req) as response:
+    content = response.read()
+    print("Body response:")
+    print("\t- type:", type(content))
+    print("\t- content:", content)
+    print("\t- utf8 content:", content.decode("utf-8")) 
