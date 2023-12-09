@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Matrix multiplication function."""
+"""Matrix  function."""
 
 
 def matrix_mul(m_a, m_b):
-    """Multiply 2 matrices."""
+    """Multiply"""
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     l1 = len(m_a)

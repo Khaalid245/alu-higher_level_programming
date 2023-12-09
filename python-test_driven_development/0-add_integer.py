@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-This module supplies one function.
+module funcation
 """
 
 
 def add_integer(a, b):
-    """The addition of 2 numbers."""
+    """The addition """
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
     if type(b) is not int and type(b) is not float:

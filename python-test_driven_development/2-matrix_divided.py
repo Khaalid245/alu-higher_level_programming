@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-This is a Matrix Divided function
+matrix
 """
 
 
 def matrix_divided(matrix, div):
-    """Divides all elements in a matrix"""
+    """matrix"""
     if type(matrix) is not list:
         raise TypeError(
             "matrix must be a matrix of integers/floats")

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""print square function"""
+"""print  function"""
 
 
 def print_square(size):
-    """prints a square with "#" size."""
+    """prints a square"""
     if type(size) is not int:
         raise TypeError("size must be an integer")
     if size < 0:
