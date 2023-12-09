@@ -10,7 +10,7 @@ from models.square import Square
 
 
 class TestBase(unittest.TestCase):
-    """Test suite for Base class"""
+    """Test suite """
 
     @classmethod
     def setUpClass(cls):

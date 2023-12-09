@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Write the class Square that inherits from Rectangle
+Write the class Square
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ This class defines the blueprint for a Square object """
+    """ This class defines  """
 
     def __init__(self, size, x=0, y=0, id=None):
         """ This func initializes a Square object"""

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Test Rectangle"""
+"""T Rectangle"""
 
 import unittest
 from io import StringIO
@@ -11,7 +11,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    """Test class for rectangle"""
+    """Test class """
 
     def test_instance(self):
         """Doc"""
